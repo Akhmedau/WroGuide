@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        self.title = "Search"
 
         let label = UILabel()
         label.text = "Search"
@@ -29,3 +30,4 @@ class SearchViewController: UIViewController {
         ])
     }
 }
+

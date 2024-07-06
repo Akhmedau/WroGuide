@@ -9,17 +9,13 @@
 import UIKit
 
 extension UIColor {
-    static let customGradientStart = UIColor(red: 241/255, green: 102/255, blue: 94/255, alpha: 1)
-    static let customGradientEnd = UIColor(red: 171/255, green: 140/255, blue: 228/255, alpha: 1)
-    static let customButtonBackground = UIColor(red: 78/255, green: 205/255, blue: 196/255, alpha: 1)
-    
     static func applyGradientLayer(view: UIView) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
-        gradientLayer.colors = [
-            UIColor.customGradientStart.cgColor,
-            UIColor.customGradientEnd.cgColor
-        ]
+        gradientLayer.colors = [UIColor.white.cgColor, UIColor.blue.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
+
