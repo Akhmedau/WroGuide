@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3582EDCA2C2B1AC300EBE4FF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582EDC92C2B1AC300EBE4FF /* LoginView.swift */; };
+		3582EDCC2C2B201E00EBE4FF /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582EDCB2C2B201E00EBE4FF /* ForgotPasswordView.swift */; };
+		358AD79E2C29ED230077318C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AD79D2C29ED230077318C /* UIButton.swift */; };
 		359CABF42C1F4E2800D5A3B4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359CABF32C1F4E2800D5A3B4 /* RegistrationView.swift */; };
 		359CABF72C1F514400D5A3B4 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359CABF62C1F514400D5A3B4 /* DataBase.swift */; };
 		359CABFA2C1F517A00D5A3B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359CABF92C1F517900D5A3B4 /* User.swift */; };
 		359CABFE2C1F553200D5A3B4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359CABFD2C1F553200D5A3B4 /* UIColor.swift */; };
-		35AA17D32C1F2D09009624A7 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA17D22C1F2D09009624A7 /* NextViewController.swift */; };
+		35A20AC32C37B321005491A1 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A20AC22C37B321005491A1 /* CategoryView.swift */; };
+		35A20AC62C37C4E6005491A1 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A20AC52C37C4E6005491A1 /* FilterViewController.swift */; };
 		35AA17D52C1F35A7009624A7 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA17D42C1F35A7009624A7 /* TutorialPageViewController.swift */; };
 		35AA17D72C1F3922009624A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA17D62C1F3922009624A7 /* HomeViewController.swift */; };
 		35AA17DA2C1F3961009624A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA17D92C1F3961009624A7 /* SearchViewController.swift */; };
@@ -22,15 +26,23 @@
 		35AE000B2C1B413D00EEDFD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35AE00092C1B413D00EEDFD8 /* LaunchScreen.storyboard */; };
 		35AE00132C1B41CB00EEDFD8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE00122C1B41CB00EEDFD8 /* RegistrationViewController.swift */; };
 		35AEFFFF2C1B413600EEDFD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEFFFE2C1B413600EEDFD8 /* AppDelegate.swift */; };
+		35C86B782C35CA1D0057B6B1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C86B772C35CA1D0057B6B1 /* CardView.swift */; };
+		35F414AD2C2F5F06005BEE5D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F414AC2C2F5F06005BEE5D /* TutorialViewController.swift */; };
+		35F414AF2C2F7CF0005BEE5D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F414AE2C2F7CF0005BEE5D /* ForgotPasswordViewController.swift */; };
+		35FC42522C346D8600A4C6AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC42512C346D8600A4C6AB /* MainTabBarController.swift */; };
 		B83DB2C2ED4B698368AA067C /* Pods_WroGuide_1_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F309EE4A69215EFD99FA1B5 /* Pods_WroGuide_1_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3582EDC92C2B1AC300EBE4FF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3582EDCB2C2B201E00EBE4FF /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		358AD79D2C29ED230077318C /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		359CABF32C1F4E2800D5A3B4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		359CABF62C1F514400D5A3B4 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		359CABF92C1F517900D5A3B4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		359CABFD2C1F553200D5A3B4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		35AA17D22C1F2D09009624A7 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		35A20AC22C37B321005491A1 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		35A20AC52C37C4E6005491A1 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		35AA17D42C1F35A7009624A7 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		35AA17D62C1F3922009624A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		35AA17D92C1F3961009624A7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +55,10 @@
 		35AE00122C1B41CB00EEDFD8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		35AEFFFB2C1B413600EEDFD8 /* WroGuide(1).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WroGuide(1).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AEFFFE2C1B413600EEDFD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		35C86B772C35CA1D0057B6B1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		35F414AC2C2F5F06005BEE5D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		35F414AE2C2F7CF0005BEE5D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		35FC42512C346D8600A4C6AB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		40C1F5D1EC41855FC6FAA6F8 /* Pods-WroGuide(1).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WroGuide(1).debug.xcconfig"; path = "Target Support Files/Pods-WroGuide(1)/Pods-WroGuide(1).debug.xcconfig"; sourceTree = "<group>"; };
 		7F309EE4A69215EFD99FA1B5 /* Pods_WroGuide_1_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WroGuide_1_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1735746D74E6703A8A6BD7 /* Pods-WroGuide(1).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WroGuide(1).release.xcconfig"; path = "Target Support Files/Pods-WroGuide(1)/Pods-WroGuide(1).release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +81,9 @@
 			children = (
 				35AE00122C1B41CB00EEDFD8 /* RegistrationViewController.swift */,
 				359CABF32C1F4E2800D5A3B4 /* RegistrationView.swift */,
+				3582EDC92C2B1AC300EBE4FF /* LoginView.swift */,
+				3582EDCB2C2B201E00EBE4FF /* ForgotPasswordView.swift */,
+				35F414AE2C2F7CF0005BEE5D /* ForgotPasswordViewController.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -84,6 +103,7 @@
 				35AA17D62C1F3922009624A7 /* HomeViewController.swift */,
 				35AA17D92C1F3961009624A7 /* SearchViewController.swift */,
 				35AA17DB2C1F398C009624A7 /* CalendarViewController.swift */,
+				35FC42512C346D8600A4C6AB /* MainTabBarController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -92,8 +112,17 @@
 			isa = PBXGroup;
 			children = (
 				359CABFD2C1F553200D5A3B4 /* UIColor.swift */,
+				358AD79D2C29ED230077318C /* UIButton.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		35A20AC42C37C48F005491A1 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				35A20AC52C37C4E6005491A1 /* FilterViewController.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		35AEFFF22C1B413600EEDFD8 = {
@@ -117,20 +146,39 @@
 		35AEFFFD2C1B413600EEDFD8 /* WroGuide(1) */ = {
 			isa = PBXGroup;
 			children = (
-				359CABFC2C1F551300D5A3B4 /* Extensions */,
-				359CABFB2C1F54CB00D5A3B4 /* TabBar */,
-				359CABF52C1F511800D5A3B4 /* Models */,
 				359CABF22C1F4BB400D5A3B4 /* LoginScreen */,
+				35F414AB2C2F5E08005BEE5D /* Tutorial */,
+				359CABFB2C1F54CB00D5A3B4 /* TabBar */,
+				35A20AC42C37C48F005491A1 /* Filter */,
+				35C86B762C35CA070057B6B1 /* Card */,
+				359CABFC2C1F551300D5A3B4 /* Extensions */,
+				359CABF52C1F511800D5A3B4 /* Models */,
 				35AEFFFE2C1B413600EEDFD8 /* AppDelegate.swift */,
 				35AE00002C1B413600EEDFD8 /* SceneDelegate.swift */,
 				35AE00022C1B413600EEDFD8 /* ViewController.swift */,
-				35AA17D22C1F2D09009624A7 /* NextViewController.swift */,
-				35AA17D42C1F35A7009624A7 /* TutorialPageViewController.swift */,
 				35AE00072C1B413D00EEDFD8 /* Assets.xcassets */,
 				35AE00092C1B413D00EEDFD8 /* LaunchScreen.storyboard */,
 				35AE000C2C1B413D00EEDFD8 /* Info.plist */,
 			);
 			path = "WroGuide(1)";
+			sourceTree = "<group>";
+		};
+		35C86B762C35CA070057B6B1 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				35C86B772C35CA1D0057B6B1 /* CardView.swift */,
+				35A20AC22C37B321005491A1 /* CategoryView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		35F414AB2C2F5E08005BEE5D /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				35AA17D42C1F35A7009624A7 /* TutorialPageViewController.swift */,
+				35F414AC2C2F5F06005BEE5D /* TutorialViewController.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		B952084443CF250F60028DB3 /* Frameworks */ = {
@@ -264,17 +312,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35AA17D32C1F2D09009624A7 /* NextViewController.swift in Sources */,
+				35A20AC62C37C4E6005491A1 /* FilterViewController.swift in Sources */,
 				35AE00032C1B413600EEDFD8 /* ViewController.swift in Sources */,
+				3582EDCC2C2B201E00EBE4FF /* ForgotPasswordView.swift in Sources */,
+				35FC42522C346D8600A4C6AB /* MainTabBarController.swift in Sources */,
 				359CABF42C1F4E2800D5A3B4 /* RegistrationView.swift in Sources */,
+				3582EDCA2C2B1AC300EBE4FF /* LoginView.swift in Sources */,
 				35AA17DA2C1F3961009624A7 /* SearchViewController.swift in Sources */,
 				35AA17D52C1F35A7009624A7 /* TutorialPageViewController.swift in Sources */,
+				35C86B782C35CA1D0057B6B1 /* CardView.swift in Sources */,
 				35AEFFFF2C1B413600EEDFD8 /* AppDelegate.swift in Sources */,
 				359CABF72C1F514400D5A3B4 /* DataBase.swift in Sources */,
 				35AE00132C1B41CB00EEDFD8 /* RegistrationViewController.swift in Sources */,
 				359CABFA2C1F517A00D5A3B4 /* User.swift in Sources */,
 				359CABFE2C1F553200D5A3B4 /* UIColor.swift in Sources */,
 				35AA17DC2C1F398C009624A7 /* CalendarViewController.swift in Sources */,
+				35A20AC32C37B321005491A1 /* CategoryView.swift in Sources */,
+				35F414AD2C2F5F06005BEE5D /* TutorialViewController.swift in Sources */,
+				35F414AF2C2F7CF0005BEE5D /* ForgotPasswordViewController.swift in Sources */,
+				358AD79E2C29ED230077318C /* UIButton.swift in Sources */,
 				35AA17D72C1F3922009624A7 /* HomeViewController.swift in Sources */,
 				35AE00012C1B413600EEDFD8 /* SceneDelegate.swift in Sources */,
 			);

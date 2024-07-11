@@ -17,6 +17,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        self.title = "Calendar"
 
         // Создание и настройка календаря
         calendar = FSCalendar()
@@ -61,4 +62,5 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         return nil
     }
 }
+
 
