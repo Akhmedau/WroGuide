@@ -27,7 +27,7 @@ class MainTabBarController: UITabBarController {
         self.viewControllers = [homeVC, searchVC, calendarVC]
         
         // Настройка скрытия таббара при прокрутке
-        self.hidesBottomBarWhenPushed = true
+        self.hidesBottomBarWhenPushed = false
     }
 }
 

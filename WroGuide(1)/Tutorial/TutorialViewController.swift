@@ -75,8 +75,9 @@ class TutorialViewController: UIPageViewController, UIPageViewControllerDataSour
         
         // Добавление кнопки Skip
         let skipButton = UIButton(type: .system)
-        skipButton.setTitle("Skip", for: .normal)
-        skipButton.setTitleColor(.orange, for: .normal)
+        let chevronImage = UIImage(systemName: "chevron.right")
+        skipButton.setImage(chevronImage, for: .normal)
+        skipButton.translatesAutoresizingMaskIntoConstraints = false
         skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
         view.addSubview(skipButton)
         

@@ -21,7 +21,7 @@ class TutorialPageViewController: UIViewController {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.spacing = 20
+        stackView.spacing = 10 // Уменьшенное расстояние между элементами
         return stackView
     }()
     
@@ -34,8 +34,9 @@ class TutorialPageViewController: UIViewController {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -43,18 +44,19 @@ class TutorialPageViewController: UIViewController {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 17.0, weight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    let nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Next", for: .normal)
-        button.backgroundColor = .orange
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+    // Удаляем кнопку nextButton
+//    let nextButton: UIButton = {
+//            let button = UIButton(type: .system)
+//            let chevronImage = UIImage(systemName: "chevron.right")
+//            button.setImage(chevronImage, for: .normal)
+//            button.translatesAutoresizingMaskIntoConstraints = false
+//            return button
+//        }()
     
     // Инициализатор для передачи заголовка страницы
     init(pageTitle: String, pageDescription: String, image: UIImage) {
@@ -80,15 +82,16 @@ class TutorialPageViewController: UIViewController {
         stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
-        stackView.addArrangedSubview(nextButton)
+        // Удаление из stackView
+//        stackView.addArrangedSubview(nextButton)
         
         // Настройка layout constraints для stackView
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50)
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
         ])
         
         // Настройка layout constraints для imageView
@@ -99,11 +102,11 @@ class TutorialPageViewController: UIViewController {
             imageView.heightAnchor.constraint(equalToConstant: 200)
         ])
         
-        // Настройка layout constraints для nextButton
-        NSLayoutConstraint.activate([
-            nextButton.widthAnchor.constraint(equalToConstant: 100),
-            nextButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
+        // Удаляем constraints для nextButton
+//        NSLayoutConstraint.activate([
+//            nextButton.widthAnchor.constraint(equalToConstant: 100),
+//            nextButton.heightAnchor.constraint(equalToConstant: 50)
+//        ])
         
         // Установка текста и изображений
         titleLabel.text = pageTitle
@@ -111,10 +114,10 @@ class TutorialPageViewController: UIViewController {
         imageView.image = image
         
         // Установка действия для nextButton
-        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+//        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
-    @objc private func nextButtonTapped() {
-        nextButtonAction?()
-    }
+//    @objc private func nextButtonTapped() {
+//        nextButtonAction?()
+
 }

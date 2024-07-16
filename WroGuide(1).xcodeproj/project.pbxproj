@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3548A6782C3FC71100181813 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3548A6772C3FC71100181813 /* NotificationViewController.swift */; };
 		3582EDCA2C2B1AC300EBE4FF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582EDC92C2B1AC300EBE4FF /* LoginView.swift */; };
 		3582EDCC2C2B201E00EBE4FF /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582EDCB2C2B201E00EBE4FF /* ForgotPasswordView.swift */; };
 		358AD79E2C29ED230077318C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AD79D2C29ED230077318C /* UIButton.swift */; };
@@ -27,6 +28,7 @@
 		35AE00132C1B41CB00EEDFD8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE00122C1B41CB00EEDFD8 /* RegistrationViewController.swift */; };
 		35AEFFFF2C1B413600EEDFD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AEFFFE2C1B413600EEDFD8 /* AppDelegate.swift */; };
 		35C86B782C35CA1D0057B6B1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C86B772C35CA1D0057B6B1 /* CardView.swift */; };
+		35CB95F42C3C29FB002DCE84 /* TrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB95F32C3C29FB002DCE84 /* TrendingView.swift */; };
 		35F414AD2C2F5F06005BEE5D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F414AC2C2F5F06005BEE5D /* TutorialViewController.swift */; };
 		35F414AF2C2F7CF0005BEE5D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F414AE2C2F7CF0005BEE5D /* ForgotPasswordViewController.swift */; };
 		35FC42522C346D8600A4C6AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC42512C346D8600A4C6AB /* MainTabBarController.swift */; };
@@ -34,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3548A6772C3FC71100181813 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		3582EDC92C2B1AC300EBE4FF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3582EDCB2C2B201E00EBE4FF /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		358AD79D2C29ED230077318C /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		35AEFFFB2C1B413600EEDFD8 /* WroGuide(1).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WroGuide(1).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AEFFFE2C1B413600EEDFD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35C86B772C35CA1D0057B6B1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		35CB95F32C3C29FB002DCE84 /* TrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingView.swift; sourceTree = "<group>"; };
 		35F414AC2C2F5F06005BEE5D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		35F414AE2C2F7CF0005BEE5D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		35FC42512C346D8600A4C6AB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3548A6742C3FC6B500181813 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3548A6772C3FC71100181813 /* NotificationViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		359CABF22C1F4BB400D5A3B4 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +162,7 @@
 				35F414AB2C2F5E08005BEE5D /* Tutorial */,
 				359CABFB2C1F54CB00D5A3B4 /* TabBar */,
 				35A20AC42C37C48F005491A1 /* Filter */,
+				3548A6742C3FC6B500181813 /* Notifications */,
 				35C86B762C35CA070057B6B1 /* Card */,
 				359CABFC2C1F551300D5A3B4 /* Extensions */,
 				359CABF52C1F511800D5A3B4 /* Models */,
@@ -168,6 +181,7 @@
 			children = (
 				35C86B772C35CA1D0057B6B1 /* CardView.swift */,
 				35A20AC22C37B321005491A1 /* CategoryView.swift */,
+				35CB95F32C3C29FB002DCE84 /* TrendingView.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -318,6 +332,7 @@
 				35FC42522C346D8600A4C6AB /* MainTabBarController.swift in Sources */,
 				359CABF42C1F4E2800D5A3B4 /* RegistrationView.swift in Sources */,
 				3582EDCA2C2B1AC300EBE4FF /* LoginView.swift in Sources */,
+				3548A6782C3FC71100181813 /* NotificationViewController.swift in Sources */,
 				35AA17DA2C1F3961009624A7 /* SearchViewController.swift in Sources */,
 				35AA17D52C1F35A7009624A7 /* TutorialPageViewController.swift in Sources */,
 				35C86B782C35CA1D0057B6B1 /* CardView.swift in Sources */,
@@ -325,6 +340,7 @@
 				359CABF72C1F514400D5A3B4 /* DataBase.swift in Sources */,
 				35AE00132C1B41CB00EEDFD8 /* RegistrationViewController.swift in Sources */,
 				359CABFA2C1F517A00D5A3B4 /* User.swift in Sources */,
+				35CB95F42C3C29FB002DCE84 /* TrendingView.swift in Sources */,
 				359CABFE2C1F553200D5A3B4 /* UIColor.swift in Sources */,
 				35AA17DC2C1F398C009624A7 /* CalendarViewController.swift in Sources */,
 				35A20AC32C37B321005491A1 /* CategoryView.swift in Sources */,
