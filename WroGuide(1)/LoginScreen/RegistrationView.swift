@@ -19,6 +19,7 @@ class RegistrationView: UIView {
     let labelOne: UILabel = {
         let label = UILabel()
         label.text = "Let's Get Started"
+        label.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -26,7 +27,8 @@ class RegistrationView: UIView {
     let labelTwo: UILabel = {
         let label = UILabel()
         label.text = "Please fill the details and create account"
-        label.font = UIFont.systemFont(ofSize: 10.0, weight: .light)
+        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 17.0, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -34,6 +36,7 @@ class RegistrationView: UIView {
     let userNameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "User Name"
+        textField.backgroundColor = .systemGray6
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -42,6 +45,7 @@ class RegistrationView: UIView {
     let emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Email"
+        textField.backgroundColor = .systemGray6
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -50,6 +54,7 @@ class RegistrationView: UIView {
     let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
+        textField.backgroundColor = .systemGray6
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -58,13 +63,17 @@ class RegistrationView: UIView {
     let logInButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
+        button.backgroundColor = .orange
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     let skipButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Skip", for: .normal)
+        let chevronImage = UIImage(systemName: "chevron.right")
+        button.setImage(chevronImage, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -73,7 +82,7 @@ class RegistrationView: UIView {
         let oAuthLabel = UILabel()
         oAuthLabel.text = "Or Use Instant Sign Up"
         oAuthLabel.numberOfLines = 2
-        oAuthLabel.font = UIFont.systemFont(ofSize: 10.0, weight: .light)
+        oAuthLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
         oAuthLabel.translatesAutoresizingMaskIntoConstraints = false
         return oAuthLabel
     }()
@@ -116,7 +125,7 @@ class RegistrationView: UIView {
         labelThree.text = "Already have an account? Sign In"
         labelThree.textColor = UIColor.systemOrange
         labelThree.numberOfLines = 2
-        labelThree.font = UIFont.systemFont(ofSize: 10.0, weight: .light)
+        labelThree.font = UIFont.systemFont(ofSize: 17.0, weight: .regular)
         labelThree.translatesAutoresizingMaskIntoConstraints = false
         return labelThree
     }()
@@ -173,13 +182,13 @@ class RegistrationView: UIView {
             skipButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
 
             labelOne.centerXAnchor.constraint(equalTo: centerXAnchor),
-            labelOne.topAnchor.constraint(equalTo: skipButton.bottomAnchor, constant: 20),
+            labelOne.topAnchor.constraint(equalTo: skipButton.bottomAnchor, constant: 150),
             
             labelTwo.centerXAnchor.constraint(equalTo: centerXAnchor),
-            labelTwo.topAnchor.constraint(equalTo: labelOne.bottomAnchor, constant: 20),
+            labelTwo.topAnchor.constraint(equalTo: labelOne.bottomAnchor, constant: 30),
             
             userNameTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
-            userNameTextField.topAnchor.constraint(equalTo: labelTwo.bottomAnchor, constant: 10),
+            userNameTextField.topAnchor.constraint(equalTo: labelTwo.bottomAnchor, constant: 30),
             userNameTextField.widthAnchor.constraint(equalToConstant: 200),
 
             emailTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -192,27 +201,28 @@ class RegistrationView: UIView {
 
             logInButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             logInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            logInButton.widthAnchor.constraint(equalToConstant: 200),
             
             oAuthLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             oAuthLabel.topAnchor.constraint(equalTo: logInButton.bottomAnchor, constant: 20),
 
             statusLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            statusLabel.topAnchor.constraint(equalTo: logInButton.bottomAnchor, constant: 20),
+            statusLabel.topAnchor.constraint(equalTo: logInButton.bottomAnchor, constant: 60),
 
             googleButton.widthAnchor.constraint(equalToConstant: 50),
             googleButton.heightAnchor.constraint(equalTo: googleButton.widthAnchor),
             googleButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -70),
-            googleButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
+            googleButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 30),
             
             appleButton.widthAnchor.constraint(equalToConstant: 50),
             appleButton.heightAnchor.constraint(equalTo: appleButton.widthAnchor),
             appleButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            appleButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
+            appleButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 30),
             
             facebookButton.widthAnchor.constraint(equalToConstant: 50),
             facebookButton.heightAnchor.constraint(equalTo: facebookButton.widthAnchor),
             facebookButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 70),
-            facebookButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
+            facebookButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 30),
             
             labelThree.centerXAnchor.constraint(equalTo: centerXAnchor),
             labelThree.topAnchor.constraint(equalTo: appleButton.bottomAnchor, constant: 40),

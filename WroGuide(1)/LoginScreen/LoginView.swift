@@ -20,7 +20,7 @@ class LoginView: UIView {
     let greetingLabel: UILabel = {
         let label = UILabel()
         label.text = "Hello !"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,7 +29,7 @@ class LoginView: UIView {
     let welcomeLabel: UILabel = {
         let label = UILabel()
         label.text = "Welcome to WroGuide"
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 17.0, weight: .regular)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -38,9 +38,8 @@ class LoginView: UIView {
     let usernameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "User Name"
+        textField.backgroundColor = .systemGray6
         textField.borderStyle = .roundedRect
-        textField.leftViewMode = .always
-        textField.leftView = UIImageView(image: UIImage(systemName: "person"))
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -48,10 +47,9 @@ class LoginView: UIView {
     let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
+        textField.backgroundColor = .systemGray6
         textField.borderStyle = .roundedRect
         textField.isSecureTextEntry = true
-        textField.leftViewMode = .always
-        textField.leftView = UIImageView(image: UIImage(systemName: "lock"))
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -60,7 +58,7 @@ class LoginView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("Forgot Password?", for: .normal)
         button.setTitleColor(.blue, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 10)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -70,7 +68,7 @@ class LoginView: UIView {
         button.setTitle("Sign In", for: .normal)
         button.backgroundColor = .orange
         button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5
+        button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -78,7 +76,7 @@ class LoginView: UIView {
     let signUpLabel: UILabel = {
         let label = UILabel()
         label.text = "Don't have an account ?"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -87,7 +85,7 @@ class LoginView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(.orange, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -123,18 +121,18 @@ class LoginView: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            greetingLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            greetingLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150),
             greetingLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            welcomeLabel.topAnchor.constraint(equalTo: greetingLabel.bottomAnchor, constant: 10),
+            welcomeLabel.topAnchor.constraint(equalTo: greetingLabel.bottomAnchor, constant: 30),
             welcomeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            usernameTextField.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 20),
+            usernameTextField.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 30),
             usernameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             usernameTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             usernameTextField.heightAnchor.constraint(equalToConstant: 50),
             
-            passwordTextField.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 20),
+            passwordTextField.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 30),
             passwordTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             passwordTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             passwordTextField.heightAnchor.constraint(equalToConstant: 50),

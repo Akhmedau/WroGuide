@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-WroGuide(1)/Pods-WroGuide(1)-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
+${BUILT_PRODUCTS_DIR}/PageControls/PageControls.framework

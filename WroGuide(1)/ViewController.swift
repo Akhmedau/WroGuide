@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController_MVC : UITabBarController {
+class ViewController : UITabBarController {
 
     var user: User?
 

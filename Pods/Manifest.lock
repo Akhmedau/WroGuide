@@ -1,16 +1,20 @@
 PODS:
   - FSCalendar (2.8.4)
+  - PageControls/PillPageControl (1.0.1)
 
 DEPENDENCIES:
   - FSCalendar
+  - PageControls/PillPageControl
 
 SPEC REPOS:
   trunk:
     - FSCalendar
+    - PageControls
 
 SPEC CHECKSUMS:
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  PageControls: fc2436c93e79419521a6de5d46d84722593e2949
 
-PODFILE CHECKSUM: 4bf7f93021d8cadbb71e2dd8880c9e62bd684521
+PODFILE CHECKSUM: c8d88e543218be985ab6f4586b931ccb07ba7067
 
 COCOAPODS: 1.12.1

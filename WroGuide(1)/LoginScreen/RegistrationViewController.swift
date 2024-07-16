@@ -92,7 +92,7 @@ class RegistrationViewController: UIViewController {
     }
     
     private func presentMainScene(with user: User) {
-        let viewController = ViewController_MVC()
+        let viewController = ViewController()
         viewController.user = user
         viewController.modalPresentationStyle = .automatic          //- change after \ .fullScreen
         present(viewController, animated: true)

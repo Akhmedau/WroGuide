@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
         bellButton.tintColor = .black
         bellButton.layer.cornerRadius = 25
         bellButton.translatesAutoresizingMaskIntoConstraints = false
-        bellButton.addTarget(self, action: #selector(bellButtonTapped), for: .touchUpInside)
+        bellButton.addTarget(self, action: #selector(notificationButtonTapped), for: .touchUpInside)
 
         // Создание поля поиска
         let searchTextField = UITextField()
@@ -71,9 +71,9 @@ class HomeViewController: UIViewController {
         for tag in tags {
             let tagButton = UIButton(type: .system)
             tagButton.setTitle(tag, for: .normal)
-            tagButton.backgroundColor = .systemGray5
+            tagButton.backgroundColor = .systemGray6
             tagButton.setTitleColor(.black, for: .normal)
-            tagButton.layer.cornerRadius = 10
+            tagButton.layer.cornerRadius = 20
             tagButton.translatesAutoresizingMaskIntoConstraints = false
             tagsContainerView.addSubview(tagButton)
             NSLayoutConstraint.activate([
@@ -81,7 +81,7 @@ class HomeViewController: UIViewController {
             ])
             if let previous = previousTag {
                 NSLayoutConstraint.activate([
-                    tagButton.leadingAnchor.constraint(equalTo: previous.trailingAnchor, constant: 10),
+                    tagButton.leadingAnchor.constraint(equalTo: previous.trailingAnchor, constant: 20),
                     tagButton.centerYAnchor.constraint(equalTo: tagsContainerView.centerYAnchor)
                 ])
             } else {
@@ -105,9 +105,11 @@ class HomeViewController: UIViewController {
         cardsContainerView.addArrangedSubview(card2)
         
         // Создание надписи и кнопки "See All"
+        
+        // Categories
         let categoriesLabel = UILabel()
         categoriesLabel.text = "Browse by Categories"
-        categoriesLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        categoriesLabel.font = UIFont.boldSystemFont(ofSize: 17)
         categoriesLabel.translatesAutoresizingMaskIntoConstraints = false
 
         let seeAllButton = UIButton(type: .system)
@@ -141,6 +143,44 @@ class HomeViewController: UIViewController {
                 categoryView.heightAnchor.constraint(equalToConstant: 120)
             ])
         }
+        
+        // Trending
+        let trendingLabel = UILabel()
+        trendingLabel.text = "Trending Destinations"
+        trendingLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        trendingLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let seeAllBtn = UIButton(type: .system)
+        seeAllBtn.setTitle("See All", for: .normal)
+        seeAllBtn.setTitleColor(.systemOrange, for: .normal)
+        seeAllBtn.translatesAutoresizingMaskIntoConstraints = false
+        seeAllBtn.addTarget(self, action: #selector(seeAllButtonTapped), for: .touchUpInside)
+        
+        let trendingScrollView = UIScrollView()
+        trendingScrollView.showsHorizontalScrollIndicator = false
+        trendingScrollView.translatesAutoresizingMaskIntoConstraints = false
+
+        let trendingContainerView = UIStackView()
+        trendingContainerView.axis = .horizontal
+        trendingContainerView.spacing = 10
+        trendingContainerView.translatesAutoresizingMaskIntoConstraints = false
+        trendingScrollView.addSubview(trendingContainerView)
+        
+        let trending = [
+            ("Nagarcot", UIImage(named: "mountain.jpg")!),
+            ("Sukute", UIImage(named: "beach.jpg")!),
+            ("Karnall", UIImage(named: "jungle.jpg")!),
+            ("Mardi", UIImage(named: "camping.jpg")!)
+        ]
+        
+        for (title, image) in trending {
+            let trendingView = TrendingView(image: image, title: title)
+            trendingContainerView.addArrangedSubview(trendingView)
+            NSLayoutConstraint.activate([
+                trendingView.widthAnchor.constraint(equalToConstant: 100),
+                trendingView.heightAnchor.constraint(equalToConstant: 120)
+            ])
+        }
 
         // Добавление надписи и кнопок на view
         view.addSubview(label)
@@ -152,6 +192,9 @@ class HomeViewController: UIViewController {
         view.addSubview(categoriesLabel)
         view.addSubview(seeAllButton)
         view.addSubview(categoriesScrollView)
+        view.addSubview(trendingLabel)
+        view.addSubview(seeAllBtn)
+        view.addSubview(trendingScrollView)
 
         // Настройка автолейаута
         NSLayoutConstraint.activate([
@@ -209,22 +252,33 @@ class HomeViewController: UIViewController {
             categoriesContainerView.bottomAnchor.constraint(equalTo: categoriesScrollView.bottomAnchor),
             categoriesContainerView.leadingAnchor.constraint(equalTo: categoriesScrollView.leadingAnchor),
             categoriesContainerView.trailingAnchor.constraint(equalTo: categoriesScrollView.trailingAnchor),
-            categoriesContainerView.heightAnchor.constraint(equalTo: categoriesScrollView.heightAnchor)
+            categoriesContainerView.heightAnchor.constraint(equalTo: categoriesScrollView.heightAnchor),
+
+            trendingLabel.topAnchor.constraint(equalTo: categoriesScrollView.bottomAnchor, constant: 20),
+            trendingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+
+            seeAllBtn.centerYAnchor.constraint(equalTo: trendingLabel.centerYAnchor),
+            seeAllBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+
+            trendingScrollView.topAnchor.constraint(equalTo: trendingLabel.bottomAnchor, constant: 10),
+            trendingScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            trendingScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            trendingScrollView.heightAnchor.constraint(equalToConstant: 120),
+
+            trendingContainerView.topAnchor.constraint(equalTo: trendingScrollView.topAnchor),
+            trendingContainerView.bottomAnchor.constraint(equalTo: trendingScrollView.bottomAnchor),
+            trendingContainerView.leadingAnchor.constraint(equalTo: trendingScrollView.leadingAnchor),
+            trendingContainerView.trailingAnchor.constraint(equalTo: trendingScrollView.trailingAnchor),
+            trendingContainerView.heightAnchor.constraint(equalTo: trendingScrollView.heightAnchor)
         ])
     }
 
-    @objc private func bellButtonTapped() {
-        let alert = UIAlertController(title: "Bell", message: "Bell button tapped", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+    @objc private func notificationButtonTapped() {
+        let notificationVC = NotificationViewController()
+        notificationVC.modalPresentationStyle = .fullScreen
+        present(notificationVC, animated: true, completion: nil)
     }
 
-//    @objc private func filterButtonTapped() {
-//        let alert = UIAlertController(title: "Filter", message: "Filter button tapped", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//        present(alert, animated: true, completion: nil)
-//    }
-    
     @objc private func seeAllButtonTapped() {
         let alert = UIAlertController(title: "See All", message: "See All button tapped", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -236,7 +290,7 @@ class HomeViewController: UIViewController {
         filterVC.modalPresentationStyle = .fullScreen
         present(filterVC, animated: true, completion: nil)
     }
-
 }
+
 
 
